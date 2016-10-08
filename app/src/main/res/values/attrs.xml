@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="flip">
+        <attr name="direction"/>
+    </declare-styleable>
+
+    <attr name="direction" format="enum">
+        <enum name="Default" value="0"/>
+        <enum name="Horizontal" value="1"/>
+        <enum name="Vertical" value="2"/>
+    </attr>
+</resources>

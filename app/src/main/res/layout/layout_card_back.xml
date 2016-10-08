@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/back"
-    style="@style/Side.Back"
-    >
-
-  <ImageView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      app:srcCompat="@mipmap/ic_launcher"
-      android:id="@+id/imBackLogo"
-      />
+    style="@style/Side.Back">
   <TextView
+      android:id="@+id/back_textview"
+      android:gravity="center"
       android:text="@string/back"
-      style="@style/Card.Title"
-      />
-</LinearLayout>
+      android:textSize="25sp"
+      android:textStyle="bold"
+      style="@style/Card.Title" />
+</RelativeLayout>

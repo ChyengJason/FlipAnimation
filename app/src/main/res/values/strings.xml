@@ -1,13 +1,5 @@
 <resources>
-  <string name="app_name">Animations</string>
-
-  <string name="navigation_drawer_open">Open navigation drawer</string>
-  <string name="navigation_drawer_close">Close navigation drawer</string>
-
-  <string name="action_settings">Settings</string>
-  <string name="front">Front side</string>
-  <string name="back">Back side</string>
-  <string name="animations">Animations</string>
-  <string name="profile">http://github.com/4xes</string>
-  <string name="flip_animation">Flip animation</string>
+    <string name="app_name">FlipApplication</string>
+    <string name="front">Front side</string>
+    <string name="back">Back side</string>
 </resources>
