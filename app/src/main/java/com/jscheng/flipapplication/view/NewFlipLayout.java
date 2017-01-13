@@ -33,13 +33,11 @@ public class NewFlipLayout extends FrameLayout implements OnSwipeListener{
     private boolean isFlip;
     private AtomicBoolean isFliping;
     public NewFlipLayout(Context context) {
-        super(context);
-        init(context);
+        this(context,null);
     }
 
     public NewFlipLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init(context,attrs);
+        this(context, attrs, 0);
     }
 
     public NewFlipLayout(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -75,13 +73,16 @@ public class NewFlipLayout extends FrameLayout implements OnSwipeListener{
 
     private void init(Context context,AttributeSet attrs){
         init(context);
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.flip);
-        int direction = ta.getInt(R.styleable.flip_direction,0);
-        switch (direction){
-            case 0: this.direction = Direction.Default;break;
-            case 1: this.direction = Direction.Vertical;break;
-            case 2: this.direction = Direction.Horizontal;break;
-            default:this.direction = Direction.Default;break;
+        if (attrs != null) {
+            TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.flip);
+            int direction = ta.getInt(R.styleable.flip_direction,0);
+            switch (direction){
+                case 0: this.direction = Direction.Default;break;
+                case 1: this.direction = Direction.Vertical;break;
+                case 2: this.direction = Direction.Horizontal;break;
+                default:this.direction = Direction.Default;break;
+            }
+            ta.recycle();
         }
     }
 
