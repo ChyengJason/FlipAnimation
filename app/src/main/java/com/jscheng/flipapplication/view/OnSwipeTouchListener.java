@@ -69,16 +69,16 @@ public class OnSwipeTouchListener implements OnTouchListener {
           }
           result = true;
         } else if (Math.abs(diffY) > SWIPE_THRESHOLD
-            && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
+                && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
           if (diffY > 0) {
-            for (OnSwipeListener swipeListener : swipeListeners) {
-              swipeListener.onSwipeDown();
-              Log.d("Gesture", "SwipeDown");
-            }
-          } else {
             for (OnSwipeListener swipeListener : swipeListeners) {
               swipeListener.onSwipeUp();
               Log.d("Gesture", "SwipeUp");
+            }
+          } else {
+            for (OnSwipeListener swipeListener : swipeListeners) {
+              swipeListener.onSwipeDown();
+              Log.d("Gesture", "SwipeDown");
             }
           }
         }
